@@ -10,7 +10,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('styles/sass/*.scss', ['sass']).on('change', livereload.changed);
+    gulp.watch('styles/sass/**/*.scss', ['sass']).on('change', livereload.changed);
 });
 
 gulp.task('default', ['sass', 'watch']);

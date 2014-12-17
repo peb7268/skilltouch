@@ -92,6 +92,16 @@ h1 {
       padding: 0 0 0 4px;
       margin-right: 2px; }
 
+.fa-bars {
+  display: none;
+  position: absolute;
+  right: 3.5%;
+  top: 15px;
+  font-size: 16pt;
+  color: #52a6e6; }
+  .fa-bars:hover {
+    cursor: pointer; }
+
 #nav {
   float: right;
   overflow: hidden;
@@ -127,29 +137,25 @@ h1 {
   position: relative;
   border-top: 1px solid #1c416d;
   border-bottom: 1px solid #1c416d; }
-
-.hero img {
-  width: 100%; }
-
-.hero .message {
-  position: absolute;
-  top: 75px;
-  left: 35%;
-  width: 50%; }
-
-.hero .message h2 {
-  font-size: 24pt;
-  margin: 0 auto 5px;
-  font-family: 'Roboto Slab', cursive;
-  letter-spacing: 1.5px;
-  font-weight: bold;
-  padding: 5px 10px;
-  box-sizing: border-box; }
-
-.hero .message p {
-  color: #353535;
-  width: 82%;
-  font-size: 14pt; }
+  .hero img {
+    width: 100%; }
+  .hero .message {
+    position: absolute;
+    top: 75px;
+    left: 35%;
+    width: 50%; }
+    .hero .message h2 {
+      font-size: 24pt;
+      margin: 0 auto 5px;
+      font-family: 'Roboto Slab', cursive;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      padding: 5px 10px;
+      box-sizing: border-box; }
+    .hero .message p {
+      color: #353535;
+      width: 82%;
+      font-size: 14pt; }
 
 #slide1.hero .message {
   top: 173px;
@@ -187,6 +193,34 @@ h1 {
       box-sizing: border-box;
       border: 1px solid #333;
       font-size: 13pt; }
+  #slide3.hero h2#what-we-do {
+    position: relative;
+    min-height: 120px; }
+    #slide3.hero h2#what-we-do div:first-child {
+      width: 135px;
+      position: absolute; }
+      #slide3.hero h2#what-we-do div:first-child span:first-child {
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-size: 60pt;
+        line-height: 1;
+        margin-bottom: -10px;
+        display: block;
+        width: 100%; }
+    #slide3.hero h2#what-we-do div:nth-child(2) {
+      padding: 0px 0 0 150px;
+      margin: -8px 0 0 0;
+      overflow: hidden; }
+      #slide3.hero h2#what-we-do div:nth-child(2) span:first-child {
+        display: block;
+        font-size: 45pt;
+        word-spacing: -10px;
+        letter-spacing: 0px; }
+      #slide3.hero h2#what-we-do div:nth-child(2) span:last-child {
+        font-size: 42pt;
+        margin: -20px 0 0 3px;
+        display: block;
+        text-transform: uppercase; }
 
 #slide4.hero {
   height: 415px; }
@@ -205,11 +239,6 @@ h1 {
       background-color: #d8dff3;
       border: none; }
 
-#slide3 .message {
-  left: 47%;
-  width: 45%;
-  top: 180px; }
-
 #slide1.hero .message h2 {
   color: #fff;
   background: #779229; }
@@ -218,9 +247,13 @@ h1 {
   color: #efefef;
   background: #c98226; }
 
-#slide3.hero .message h2 {
-  color: #efefef;
-  background: #9c9bb2; }
+#slide3.hero .message {
+  right: 2%;
+  width: 45%;
+  top: 90px; }
+  #slide3.hero .message h2 {
+    color: #efefef;
+    background: #9c9bb2; }
 
 #slide4.hero .message h2 {
   color: #efefef;
@@ -244,3 +277,145 @@ h1 {
     #nav li.call a:hover {
       color: #fff;
       background-color: initial; }
+
+/* Media Queries */
+@media (max-width: 1450px) {
+  .hero {
+    max-height: 500px; } }
+
+@media (max-width: 1200px) {
+  .hero {
+    max-height: 470px; } }
+
+@media (max-width: 1080px) {
+  .hero {
+    max-height: 430px; } }
+
+@media (max-width: 990px) {
+  .hero {
+    max-height: 350px; }
+  #page.hero .message {
+    top: 128px;
+    left: initial;
+    width: 48.5%;
+    right: 2%; }
+    #page.hero .message h2 {
+      font-size: 22pt; }
+    #page.hero .message p {
+      font-size: 18pt; } }
+
+@media (max-width: 768px) {
+  .hero {
+    max-height: 275px; }
+  #page.hero .message {
+    top: 100px; }
+    #page.hero .message h2 {
+      font-size: 17pt; }
+    #page.hero .message p {
+      font-size: 16pt; } }
+
+/* Nav change 1 */
+@media (max-width: 680px) {
+  .hero {
+    max-height: 275px;
+    margin: 105px auto 45px auto; }
+  #page .hero .message {
+    top: 60px;
+    right: 3.5%; }
+    #page .hero .message h2 {
+      font-size: 17pt; }
+    #page .hero .message p {
+      font-size: 16pt; } }
+
+@media (max-width: 635px) {
+  .hero {
+    max-height: 250px; }
+  #page #slide2.hero .message p {
+    font-size: 12pt; } }
+
+@media (max-width: 580px) {
+  .hero {
+    max-height: 220px; } }
+
+@media (max-width: 505px) {
+  header {
+    padding: 5px 0 10px; }
+  #nav {
+    float: none;
+    position: relative;
+    width: 90%;
+    margin: 0 auto; }
+  #page .hero {
+    max-height: 200px;
+    margin: 82px auto 25px auto; }
+    #page .hero .message {
+      width: 55% !important; }
+      #page .hero .message h2 {
+        font-size: 12pt;
+        font-weight: 100; }
+      #page .hero .message p {
+        font-size: 14pt; } }
+
+@media (max-width: 320px) {
+  header {
+    background: rgba(255, 255, 255, 0.9); }
+  .fa-bars {
+    display: inline-block; }
+  #nav {
+    display: none; }
+    #nav li {
+      float: none; }
+      #nav li span, #nav li a {
+        display: block; }
+  #page .hero {
+    max-height: 130px;
+    margin-top: 55px; }
+    #page .hero .message {
+      top: 22px;
+      right: 5%;
+      left: initial; }
+      #page .hero .message h2 {
+        font-size: 10pt; }
+      #page .hero .message p {
+        font-size: 11pt;
+        line-height: 1; }
+  #page #slide2.hero .message {
+    top: 45px; }
+    #page #slide2.hero .message h2 {
+      font-size: 13pt;
+      border: 1px solid #89571a;
+      box-shadow: 0px 0px 6px rgba(51, 51, 51, 0.42); }
+    #page #slide2.hero .message p {
+      display: none; }
+  #page #slide3.hero h2#what-we-do div:first-child {
+    width: 100%; }
+    #page #slide3.hero h2#what-we-do div:first-child span:first-child {
+      font-size: 20pt;
+      display: initial;
+      text-transform: initial;
+      margin: initial; }
+    #page #slide3.hero h2#what-we-do div:first-child span:last-child {
+      font-size: 20pt; }
+  #page #slide3.hero h2#what-we-do div:nth-child(2) {
+    width: 100%;
+    padding: 25px 0 0 0px;
+    margin: 0;
+    overflow: hidden; }
+    #page #slide3.hero h2#what-we-do div:nth-child(2) span:first-child {
+      font-size: 20pt;
+      display: initial;
+      text-transform: initial;
+      word-spacing: initial;
+      margin: initial;
+      line-height: 1.4; }
+    #page #slide3.hero h2#what-we-do div:nth-child(2) span:last-child {
+      font-size: 20pt;
+      margin: -6px 0 0 0; }
+  #page #slide4.hero .message {
+    width: 47% !important;
+    right: 2%; }
+    #page #slide4.hero .message h2 {
+      font-size: 14pt;
+      line-height: 1.2; }
+    #page #slide4.hero .message p {
+      display: none; } }

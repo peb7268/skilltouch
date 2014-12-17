@@ -1,10 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,300italic|Roboto+Slab:400,300,100,700);
 @import 'partials/reset';
+@import 'partials/_paths';
 @import 'partials/_colors';
 
-$base_path: 'http://local.wordpress.dev/wp-content/themes/skilltouch/';
-$img_path:  $base_path + 'img';
 
 body {
   font-family: 'Lato', sans-serif;
@@ -62,6 +61,17 @@ h1 {
   }
 }
 
+.fa-bars {
+  display: none;
+  position: absolute;
+  right: 3.5%;
+  top: 15px;
+  font-size: 16pt;
+  color: $light-blue;
+  &:hover {
+    cursor: pointer;
+  }
+}
 #nav {
   float: right;
   overflow: hidden;
@@ -103,28 +113,25 @@ h1 {
   position: relative;
   border-top: 1px solid #1c416d;
   border-bottom: 1px solid #1c416d;
+  img {
+    width: 100%;
+  }
+  .message {
+    position: absolute;
+    top: 75px;
+    left: 35%;
+    width: 50%;
+    h2 {
+      font-size: 24pt;
+      margin: 0 auto 5px;
+      font-family: 'Roboto Slab', cursive; letter-spacing: 1.5px;
+      font-weight: bold;
+      padding: 5px 10px;
+      box-sizing: border-box;
+    }
+    p { color: #353535; width: 82%; font-size: 14pt; }
+  }
 }
-
-.hero img {
-  width: 100%;
-}
-
-.hero .message {
-  position: absolute;
-  top: 75px;
-  left: 35%;
-  width: 50%;
-}
-
-.hero .message h2 {
-  font-size: 24pt;
-  margin: 0 auto 5px;
-  font-family: 'Roboto Slab', cursive; letter-spacing: 1.5px;
-  font-weight: bold;
-  padding: 5px 10px;
-  box-sizing: border-box;
-}
-.hero .message p { color: #353535; width: 82%; font-size: 14pt; }
 
 #slide1.hero {
   .message {
@@ -163,6 +170,41 @@ h1 {
       font-size: 13pt;
     }
   }
+
+  h2#what-we-do{
+    position: relative;
+    min-height: 120px;
+    div:first-child{
+      width: 135px;
+      position: absolute;
+      span:first-child{
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-size: 60pt;
+        line-height: 1;
+        margin-bottom: -10px;
+        display: block;
+        width: 100%;
+      }
+    }
+    div:nth-child(2){
+      padding: 0px 0 0 150px;
+      margin: -8px 0 0 0;
+      overflow: hidden;
+      span:first-child{
+        display: block;
+        font-size: 45pt;
+        word-spacing: -10px;
+        letter-spacing: 0px;
+      }
+      span:last-child{
+        font-size: 42pt;
+        margin: -20px 0 0 3px;
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 #slide4.hero {
   height: 415px;
@@ -184,13 +226,19 @@ h1 {
   }
 }
 
-#slide3 .message { left: 47%; width: 45%; top: 180px; }
-
 #slide1.hero .message h2 { color: #fff;  background: #779229; }
 #slide2.hero .message h2 { color: #efefef; background: #c98226; }
-#slide3.hero .message h2 { color: #efefef; background: #9c9bb2; }
-#slide4.hero .message h2 { color: #efefef; background: #c98226; font-size: 38pt; line-height: 0.9; padding: 10px 10px 15px; }
+#slide3.hero .message {
+  right: 2%;
+  width: 45%;
+  top: 90px;
 
+  h2 {
+    color: #efefef;
+    background: #9c9bb2;
+  }
+}
+#slide4.hero .message h2 { color: #efefef; background: #c98226; font-size: 38pt; line-height: 0.9; padding: 10px 10px 15px; }
 #slide3.hero p { color: #efefef; width: 100%; }
 
 #nav li.call {
@@ -203,5 +251,7 @@ h1 {
     &:hover { color: #fff; background-color: initial; }
   }
 }
+
+@import 'partials/media_queries';
 
 

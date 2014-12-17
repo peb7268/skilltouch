@@ -1,7 +1,14 @@
-<?php /* Template Name: Site */
+<?php
+/* Template Name: Site */
 get_header();
-    st_site();
-    if(have_posts()): while(have_posts()): the_post();
-        the_content();
-    endwhile; endif;
-get_footer();
+?>
+
+<?php echo st_get_headers($allPages); ?>
+
+<section id="content">
+    <div class="wrapper">
+        <?php echo st_get_content($allPages); ?>
+    </div>
+</section>
+
+<?php get_footer();

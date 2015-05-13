@@ -12,7 +12,7 @@
 <body id="page" class="page{{tab}}" ng-controller="AppController as App">
 <header>
     <div class="wrapper">
-        <h1 class="title"><span>S</span>killtouch</h1>
+        <h1 class="title"><span>Skill</span>touch</h1>
         <i class="fa fa-bars"></i>
         <ul id="nav" ng-init="tab = 1">
             <?php $allPages   = get_pages(); ?>

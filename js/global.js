@@ -6,7 +6,6 @@
         var $nav     = e.data.sel;
         //debugger;
 
-        console.log('isMobile: ', isMobile);
         if(isMobile && e.currentTarget.nodeName == 'A') {
             window.setTimeout(function () {
                 console.log('there');
@@ -26,6 +25,30 @@
         $nav = $('#nav');
         $('.fa-bars').on('click', {sel: $nav}, toggleNav);
         $nav.find('> li > span > a').on('click', { sel: $nav }, toggleNav);
+
+        $('#details li a').on('click', function(e){
+            e.preventDefault();
+            var selector = '#' + (e.target.href).split('#')[1];
+            var $main_nav = $('#details');
+
+            $main_nav.fadeOut(100, function(){
+                $(selector).fadeIn(100, function(){
+                    $(this).addClass('active');
+                });
+            });
+        });
+
+        $('#services a.back').on('click', function(e){
+            e.preventDefault();
+            var $main_nav = $('#details');
+            $('.active').fadeOut(100, function(){
+                $main_nav.fadeIn(100, function(){
+                    var center = $(window).height() / 2;
+                    window.scrollTo(0, center);
+                });
+            });
+        });
+
     });
 })(jQuery)
 

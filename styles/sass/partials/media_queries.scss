@@ -23,6 +23,7 @@
   }
 }
 
+
 @media (max-width: 768px) {
   .hero { max-height: 275px; }
   #page.hero .message {
@@ -31,6 +32,8 @@
     p  { font-size: 16pt; }
   }
 }
+
+@import 'media_queries/ipad';
 
 /* Nav change 1 */
 @media (max-width: 680px) {
@@ -77,7 +80,7 @@
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   header { background: rgba(255, 255, 255, .9); }
   .fa-bars {
     display: inline-block;

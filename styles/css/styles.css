@@ -406,6 +406,46 @@ ul .fa-info-circle {
           max-height: 70px;
           max-width: 100px; }
 
+#footerToggle {
+  position: fixed;
+  bottom: 30px;
+  left: 2%;
+  font-size: 18pt;
+  color: #fff;
+  background: #006bbd;
+  padding: 10px 12px;
+  border-radius: 30px;
+  text-align: center;
+  z-index: 12; }
+  #footerToggle:hover {
+    background: #024980; }
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: #444;
+  border-top: 7px solid #006bbd;
+  z-index: 10; }
+  #footer li {
+    min-height: 430px;
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    color: #efefef;
+    border-right: 1px solid #333;
+    margin: 25px 0 0; }
+    #footer li:last-child {
+      border-right: none; }
+    #footer li:last-child, #footer li:nth-child(2) {
+      border-left: 1px solid #555; }
+    #footer li h4 {
+      margin: 0px 0 5px 0; }
+
 /* Media Queries */
 @media (max-width: 1450px) {
   .hero {

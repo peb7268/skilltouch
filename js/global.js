@@ -21,6 +21,19 @@
         }
     }
     
+    function footerToggle(evt){
+        evt.preventDefault();
+        if($('#footer').height() === 0){
+            $('#footer').animate({
+              height: '470px'
+            });
+        } else {
+            $('#footer').animate({
+              height: '0'
+            });
+        }
+    }
+
     function ajaxSubmitForm(evt){
         evt.preventDefault();
         var $target = $(evt.target);
@@ -69,6 +82,7 @@
     }
 
     $('document').ready(function($){
+        $('#footerToggle').on('click', footerToggle);
         $('.galleryNav li a').on('click', fillGalleryCanvas);
         $('.galleryNav li:first a img').click();
 
@@ -98,7 +112,7 @@
             $content.show();
             
             var $main_nav = $('#details');
-            $('.active').fadeOut(100, function(){
+            $('.service.active').fadeOut(100, function(){
                 $main_nav.fadeIn(100, function(){
                     var center = $(window).height() / 2;
                     window.scrollTo(0, center);

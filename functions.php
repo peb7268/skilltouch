@@ -1,4 +1,8 @@
 <?php
+
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
 #Set some paths
 define('TEMPLATE_DIR', get_template_directory_uri());
 define('IMAGE_DIR', get_template_directory_uri().'/img');
@@ -34,6 +38,7 @@ function st_get_content($allPages){
 
     ksort($pages);
     $pages = implode(' ', $pages);
+
     return $pages;
 }
 
@@ -55,8 +60,10 @@ function st_build_nav($page_order, $allPages){
 
     foreach($page_order as $i => $page_name):
         $i++;
+
         foreach($allPages as $idx => $item):
-            $nav_elements[$i] = '<li><span ng-class="{active:tab==='.$i.'}"><a href="#home" ng-click="tab = '.$i.'">'.$page_name.'</a></span></li>';
+            $hashName = '#'.str_replace(' ', '_', strtolower($page_name));
+            $nav_elements[$i] = '<li><span ng-class="{active:tab==='.$i.'}"><a href="'. $hashName .'" ng-click="tab = '.$i.'">'.$page_name.'</a></span></li>';
         endforeach;
     endforeach;
 

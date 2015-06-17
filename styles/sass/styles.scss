@@ -368,7 +368,7 @@ ul .fa-info-circle {
   }
   ul.galleryNav {
     overflow: hidden;
-    margin: 25px 0;
+    margin: 25px 0 75px;
 
     li {
       float: left;
@@ -442,6 +442,10 @@ ul .fa-info-circle {
       margin: 0px 0 5px 0;
     }
   }
+}
+
+.backBtn {
+  margin: 25px 0;
 }
 
 @import 'partials/media_queries';

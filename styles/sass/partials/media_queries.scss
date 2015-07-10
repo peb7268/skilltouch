@@ -53,18 +53,90 @@
 
 @media (max-width: 580px) {
   .hero { max-height: 220px; }
+  .gallery {
+    #canvas {
+      height: initial;
+      img { max-width: 100%; }
+    }
+  }
 }
 
-@media (max-width: 505px) {
-  header {
-    padding: 5px 0 10px;
-    .wrapper {}
+//iPhone 6 Plus
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) 
+and (-webkit-min-device-pixel-ratio : 3){ 
+  header { 
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 10px 0 3px; 
   }
+  .fa-bars {
+    display: inline-block;
+  }
+  #nav {
+    display: none;
+    li {
+      float: none;
+      span, a { display: block; }
+    }
+  }
+
+   #details {
+    li { 
+      width: 100%; 
+      float: none;
+      margin: 25px auto;
+    }
+    a { 
+      display: block;
+      img { max-width: 100%; }
+    }
+  }
+
+  #getInTouch { 
+    float: none;
+    margin-bottom: 50px;
+    width: 98%;
+  }
+
+  .sidebar {
+    float: none;
+    width: 98%;
+  }
+
+  #footer {
+    ul { overflow: auto; padding-bottom: 65px; }
+    
+    li {
+      float: none;
+      width: 99%;
+      margin: 0 auto;
+      min-height: initial;
+      border-bottom: 1px solid #333;
+      border-right: none;
+      border-left: none;
+
+      &:nth-child(2), &:last-child {
+        border-top: 1px solid #555;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  #footerToggle { bottom: 65px; }
+}
+
+//Note 4
+@media (max-width: 505px) {
   #nav { float: none; position: relative; width: 90%; margin: 0 auto; }
   #page {
     .hero {
       max-height: 200px;
-      margin: 82px auto 25px auto;
+      margin: 58px auto 25px auto;
       .message {
         width: 55% !important;
         h2 {
@@ -77,11 +149,14 @@
       }
     }
   }
-
 }
 
+//Regular iPhone & Generic Mobile Devices
 @media (max-width: 375px) {
-  header { background: rgba(255, 255, 255, .9); }
+  header { 
+    background: rgba(255, 255, 255, .9);
+    padding: 10px 0 3px;
+  }
   .fa-bars {
     display: inline-block;
   }
@@ -165,4 +240,50 @@
     }
   }
 
+  #details {
+    li { 
+      width: 100%; 
+      float: none;
+      margin: 25px auto;
+    }
+    a { 
+      display: block;
+      img { max-width: 100%; }
+    }
+  }
+
+  #getInTouch { 
+    float: none;
+    margin-bottom: 50px;
+    width: 98%;
+  }
+
+  .sidebar {
+    float: none;
+    width: 98%;
+  }
+
+  #footer {
+    ul { overflow: auto; padding-bottom: 65px; }
+    
+    li {
+      float: none;
+      width: 99%;
+      margin: 0 auto;
+      min-height: initial;
+      border-bottom: 1px solid #333;
+      border-right: none;
+      border-left: none;
+
+      &:nth-child(2), &:last-child {
+        border-top: 1px solid #555;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  #footerToggle { bottom: 65px; }
 }

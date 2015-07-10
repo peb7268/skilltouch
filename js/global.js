@@ -4,7 +4,6 @@
     function toggleNav(e){
         var isMobile = $('.fa-bars').is(':visible');
         var $nav     = e.data.sel;
-        //debugger;
 
         if(isMobile && e.currentTarget.nodeName == 'A') {
             window.setTimeout(function () {
@@ -23,9 +22,12 @@
     
     function footerToggle(evt){
         evt.preventDefault();
+        var isMobile = $('.fa-bars').is(':visible');
+        var height   = (isMobile === true) ? '675px' : '470px';
+        
         if($('#footer').height() === 0){
             $('#footer').animate({
-              height: '470px'
+              height: height
             });
         } else {
             $('#footer').animate({

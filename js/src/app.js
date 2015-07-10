@@ -5,6 +5,11 @@ App.config(['$locationProvider', function($locationProvider){
 	
 }]);
 
-App.controller('AppController', [function(){
-    this.name = 'Skilltouch | Elegance In Motion';
+App.controller('AppController', ['$scope', function($scope){
+    $scope.name = 'Skilltouch | Elegance In Motion';
+
+    $scope.togglePage = function($event, $i){
+    	$event.preventDefault();
+    	$scope.tab = $i;
+    }
 }]);

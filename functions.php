@@ -1,5 +1,5 @@
 <?php
-
+//die('local');
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
@@ -63,7 +63,7 @@ function st_build_nav($page_order, $allPages){
 
         foreach($allPages as $idx => $item):
             $hashName = '#'.str_replace(' ', '_', strtolower($page_name));
-            $nav_elements[$i] = '<li><span ng-class="{active:tab==='.$i.'}"><a href="'. $hashName .'" ng-click="tab = '.$i.'">'.$page_name.'</a></span></li>';
+            $nav_elements[$i] = '<li><span ng-class="{active:tab==='.$i.'}"><a href="'. $hashName .'" ng-click="togglePage($event,'. $i .')">'.$page_name.'</a></span></li>';
         endforeach;
     endforeach;
 

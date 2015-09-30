@@ -1,0 +1,64 @@
+/* Media Queries */
+@media (max-width: 1450px) {
+  .hero { max-height: 500px; }
+}
+
+@media (max-width: 1200px) {
+  .hero { max-height: 470px; }
+}
+
+@media (max-width: 1080px) {
+  .hero { max-height: 430px; }
+}
+
+@media (max-width: 990px) {
+  .hero { max-height: 350px; }
+  #page.hero .message {
+    top: 128px;
+    left: initial;
+    width: 48.5%;
+    right: 2%;
+    h2 { font-size: 22pt; }
+    p  { font-size: 18pt; }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero { max-height: 275px; }
+  #page.hero .message {
+    top: 100px;
+    h2 { font-size: 17pt; }
+    p  { font-size: 16pt; }
+  }
+}
+
+@import 'media_queries/ipad';
+
+/* --- General Transition Styling:  Nav change 1  --- */
+@media (max-width: 680px) {
+  .hero { max-height: 275px; margin: 105px auto 45px auto; }
+  #page .hero .message {
+    top: 60px;
+    right: 3.5%;
+    h2 { font-size: 17pt; }
+    p  { font-size: 16pt; }
+  }
+}
+
+@media (max-width: 635px) {
+  .hero { max-height: 250px; }
+  #page #slide2.hero .message p { font-size: 12pt; }
+}
+
+@media (max-width: 580px) {
+  .hero { max-height: 220px; }
+  .gallery {
+    #canvas {
+      height: initial;
+      img { max-width: 100%; }
+    }
+  }
+}
+
+@import 'media_queries/phones';

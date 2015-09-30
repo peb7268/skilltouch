@@ -7,9 +7,15 @@ App.config(['$locationProvider', function($locationProvider){
 
 App.controller('AppController', ['$scope', function($scope){
     $scope.name = 'Skilltouch | Elegance In Motion';
+    var hash 	= window.location.hash;
+	
+	$scope.togglePage = function($event, $i){ $scope.tab = $i; };
 
-    $scope.togglePage = function($event, $i){
-    	$event.preventDefault();
-    	$scope.tab = $i;
-    }
+	hash 				= (hash.length > 0) ? hash : '#home';
+	var $link 			= jQuery('#nav li').find('a[href="'+hash+'"]');
+	var idx 			= $link.data('index');
+
+	$scope.navTarget 	= $link;
+	$scope.tab 			= idx;
+	jQuery($scope.navTarget).click();			
 }]);

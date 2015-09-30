@@ -14,7 +14,7 @@
     <div class="wrapper">
         <h1 class="title"><span>Skill</span>touch</h1>
         <i class="fa fa-bars"></i>
-        <ul id="nav" ng-init="tab = 1">
+        <ul id="nav">
             <?php $allPages   = get_pages(); ?>
             <?php $page_order = st_get_page_order($allPages); ?>
             <?php st_build_nav($page_order, $allPages); ?>

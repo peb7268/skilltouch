@@ -518,7 +518,7 @@ ul .fa-info-circle {
     #slide3.hero .message p {
       display: none; } }
 
-/* Nav change 1 */
+/* --- General Transition Styling:  Nav change 1  --- */
 @media (max-width: 680px) {
   .hero {
     max-height: 275px;
@@ -545,7 +545,7 @@ ul .fa-info-circle {
     .gallery #canvas img {
       max-width: 100%; } }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+@media (max-width: 450px) {
   header {
     background: rgba(255, 255, 255, 0.9);
     padding: 10px 0 3px; }
